@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.background {
+    min-height: 100vh;
+    background-color: rgb(41, 41, 41);
+    background-size: cover;
+    background-position: center;
+}
+
+.content-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.site-logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu-bar a {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.home-direct::before {
+    content: '';
+    position: absolute;
+    top: 125%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(120,192,255,1) 0%, rgba(0,221,255,1) 100%);
+    transition: .3s;
+}
+
+.home-direct:hover::before {
+    width: 100%;
+}
+
+.projects-direct::before {
+    content: '';
+    position: absolute;
+    top: 125%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(39, 255, 104) 0%, rgba(0,255,87,1) 100%);
+    transition: .3s;
+}
+
+.projects-direct:hover::before {
+    width: 100%;
+}
+
+.home-active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(120,192,255,1) 0%, rgba(0,221,255,1) 100%);
+}
+
+.projects-active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgb(39, 255, 104) 0%, rgba(0,255,87,1) 100%);
+}
