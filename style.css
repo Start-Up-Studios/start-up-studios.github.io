@@ -3,33 +3,222 @@ body {
     font-family: Arial, sans-serif;
   }
 
-  #taskbar {
-    background-color: #4b77ad7b; /* Set the background color of the taskbar */
-    padding: 20px; /* Adjust the padding as needed */
-    color: #fff; /* Set the text color */
-    text-align: center;
+  .navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgb(81, 81, 81); /* Set the background color of the taskbar */
+    display: flex;
+    justify-content: center;
+    z-index: 100;
   }
 
-  #taskbar a {
+  .navbar-home {
+    position: relative;
     color: #fff; /* Set the color of the taskbar links */
     text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
     margin: 0 10px; /* Adjust spacing between links */
     padding: 5px 10px; /* Adjust padding for each link */
     border-radius: 5px; /* Add rounded corners to links */
     transition: background-color 0.7s; /* Smooth transition for background color change */
   }
 
-  #taskbar a:hover {
-    background-color: #555; /* Change background color on hover */
+  .navbar-about {
+    position: relative;
+    color: #fff; /* Set the color of the taskbar links */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 5px 10px; /* Adjust padding for each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.7s; /* Smooth transition for background color change */
+  }
+  
+  .navbar-projects {
+    position: relative;
+    color: #fff; /* Set the color of the taskbar links */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 5px 10px; /* Adjust padding for each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.7s; /* Smooth transition for background color change */
   }
 
-  #page {
+  .navbar-services{
+    position: relative;
+    color: #fff; /* Set the color of the taskbar links */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 5px 10px; /* Adjust padding for each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.7s; /* Smooth transition for background color change */
+  }
+
+  .navbar-donate{
+    position: relative;
+    color: #fff; /* Set the color of the taskbar links */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 5px 10px; /* Adjust padding for each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.7s; /* Smooth transition for background color change */
+  }
+
+  .navbar-contact{
+    position: relative;
+    color: #fff; /* Set the color of the taskbar links */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    margin: 0 10px; /* Adjust spacing between links */
+    padding: 5px 10px; /* Adjust padding for each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.7s; /* Smooth transition for background color change */
+  }
+
+  .navbar-home::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(116,232,255,1) 0%, rgba(40,179,255,1) 100%);
+    transition: .3s;
+  }
+
+  .navbar-about::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(116,255,156,1) 0%, rgba(40,255,193,1) 100%);
+    transition: .3s;
+  }
+
+  .navbar-projects::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,116,116,1) 0%, rgb(255, 84, 84) 100%);
+    transition: .3s;
+  }
+
+  .navbar-services::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,206,116,1) 0%, rgba(255,221,40,1) 100%);
+    transition: .3s;
+  }
+
+  .navbar-donate::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(219,116,255,1) 0%, rgba(255,40,250,1) 100%);
+    transition: .3s;
+  }
+
+  .navbar-contact::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(233,233,233,1) 0%, rgba(177,177,177,1) 100%);
+    transition: .3s;
+  }
+
+  .navbar-home:hover::before {
+    width: 100%;
+  }
+
+  .navbar-about:hover::before {
+    width: 100%;
+  }
+
+  .navbar-projects:hover::before {
+    width: 100%;
+  }
+
+  .navbar-services:hover::before {
+    width: 100%;
+  }
+
+  .navbar-donate:hover::before {
+    width: 100%;
+  }
+
+  .navbar-contact:hover::before {
+    width: 100%;
+  }
+
+    /* Navigation Bar Hover */
+
+  .navbar-home:hover {
+    background: linear-gradient(90deg, rgba(116,232,255,1) 0%, rgba(40,179,255,1) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar-about:hover {
+    background: linear-gradient(90deg, rgba(116,255,156,1) 0%, rgba(40,255,193,1) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar-projects:hover {
+    background: linear-gradient(90deg, rgba(255,116,116,1) 0%, rgb(255, 84, 84) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar-services:hover {
+    background: linear-gradient(90deg, rgba(255,206,116,1) 0%, rgba(255,221,40,1) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar-donate:hover {
+    background: linear-gradient(90deg, rgba(219,116,255,1) 0%, rgba(255,40,250,1) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .navbar-contact:hover {
+    background: linear-gradient(90deg, rgba(233,233,233,1) 0%, rgba(177,177,177,1) 100%);
+    background-clip: text; /* Seperates text from background */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .index-container-1 {
       width: 80%;
-      height: 200%;
+      height: 200px;
       padding: 20px;
       margin-top: 20px;
       margin-left: auto;
       margin-right: auto;
-      background-color: rgba(56, 194, 204, 0.555);
+      background-color: rgba(50, 50, 50, 0.8);
       border-radius: 10pt;
+      border-width: 5pt;
+      box-shadow: 0px 0px 10px 5px #888888;
+      border-color: rgb(104, 235, 255);
+      border-style: outset;
   }
